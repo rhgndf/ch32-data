@@ -20,6 +20,18 @@
     kind: flash
     version: v3
     block: FLASH
+- name: CRC
+  address: 0x40023000
+  registers:
+    kind: crc
+    version: h4
+    block: CRC
+  rcc:
+    bus_clock: HCLK
+    kernel_clock: HCLK
+    enable:
+      register: AHBPCENR
+      field: CRCEN
 - name: EXTI
   address: 0x40010400
   registers:
